@@ -11,19 +11,19 @@ import android.view.View;
  */
 public class MyImage extends View {
 
-        MyImage(Context context) {
-            super(context);
-        }
+    MyImage(Context context) {
+        super(context);
+    }
 
-        @Override
-        protected void onDraw(Canvas canvas) {
-            super.onDraw(canvas);
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
 
-            Bitmap picture = BitmapFactory.decodeResource(getResources(), R.drawable.ka);
-            float cx = getWidth()/2.0f;
-            float cy = getWidth()/2.0f;
-            float x = (getWidth() - picture.getWidth()) / 2.0f;
-            float y = (getHeight() - picture.getHeight()) / 2.0f;
+        Bitmap picture = BitmapFactory.decodeResource(getResources(), R.drawable.ka);
+        float cx = getWidth() / 2.0f;
+        float cy = getWidth() / 2.0f;
+        float x = (getWidth() - picture.getWidth()) / 2.0f;
+        float y = (getHeight() - picture.getHeight()) / 2.0f;
 //            회전
 //            canvas.rotate(45,cx,cy);
 //            이동
@@ -33,8 +33,7 @@ public class MyImage extends View {
 //            비틀기
 //            canvas.skew(0.4f, 0.4f);
 
-            canvas.drawBitmap(picture, x, y, null);
-        }
-
+        canvas.drawBitmap(picture, x, y, null);
     }
+
 }
